@@ -1,7 +1,21 @@
-img{
+#cover{
     width: 180px;
-    height: 180px
+    height: 180px;
+}
+#heart{
+    
+    width: 60px;
+    height: 60px;
 }
 #list{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#songinfo{
     display: grid;
+    flex-direction: column;
+    width: 300px;
+    height: 60px;
+    margin: 0;
 }
