@@ -1,0 +1,13 @@
+#heart{
+    width: 60px;
+    height: 60px;
+}
+
+#likebtn{
+    width: 70px;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

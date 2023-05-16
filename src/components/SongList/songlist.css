@@ -1,11 +1,7 @@
 #cover{
     width: 180px;
     height: 180px;
-}
-#heart{
-    
-    width: 60px;
-    height: 60px;
+    box-shadow: 0 8px 8px -4px rgb(74, 74, 74);
 }
 #list{
     display: flex;
@@ -18,4 +14,10 @@
     width: 300px;
     height: 60px;
     margin: 0;
+}
+
+#song-container{
+    background-color: lightgray;
+    padding: 20px;
+    margin: 20px;
 }
