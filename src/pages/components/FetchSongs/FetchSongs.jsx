@@ -5,7 +5,7 @@ const FetchSongs = () => {
         
     async function getSongs(){
         try{ 
-            const result = await fetch ('https://api.punkapi.com/v2/beers')
+            const result = await fetch ('https://api')
             const data = await result.json();
             setSongs(data)
         }catch(err){

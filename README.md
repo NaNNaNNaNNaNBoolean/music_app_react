@@ -3,42 +3,29 @@
 Creating a React website that showcases your favourite artists songs/albums.
 Not the biggest music person, so this gonna be tough
 
-### to do list 
+## to do list 
 
-1. Setup your first React App using npm and vite. [Done!]
-2. Install the required libraries [Done!]
-3. Using JSX, make your website a portfolio of their work.
-4. The site should be broken down into components that are rendered on the same page.
+### initally setup, components, useState
+- https://github.com/LaFosseAcademy/react-exercises/blob/intro-to-react-exercises/instructions.md
 
-    1. It should contain at the very minimum two components. An example would be:
+- 1,2,3 done 
+- question 4 part 1,2 done - part 3 - control form needs to be implemented
 
-        1. Their name, music type and an introduction paragraph. [Done!]
-        2. A list of their songs/albums including name,release date and cover art. damn son [Done! (most of them)]
+### Adding a better file structure and props -DONE!
+- https://github.com/LaFosseAcademy/react-exercises/blob/react-props-exercises/instructions.md
+ - tis done
 
-    2. Add a 'Like' feature to your music page
+### adding useEffect
+- https://github.com/LaFosseAcademy/react-exercises/blob/react-useEffect-exercises/instructions.md
 
-        1. Add an element eg. a button, or an icon next to each song [Done!]
-        2. When a user clicks the element, change something about it to indicate the user has 'liked' the song [Done!]
-        3. When a user clicks again, the element should revert back to the 'unliked' view [Done!]
-        4. Use state to track if a track has been liked or not [Done!]
-        5. You may create additional components to acheive this as you see fit [Done!]
+- part 1 needs to be done, (just going to make my own, cuz apis supplied are dodgy), part 2 done
 
-    3. Add a controlled form
-        1. Create a controlled form into which users can provide data
-        2. On submission, do something with this data
-
-#### Refactor your music app to have a better file structure and props
-
+### Adding navigation
+- https://github.com/LaFosseAcademy/react-exercises/blob/react-navigation-exercises/instructions.md
 1. Requirements are:
 
-    1. Refactor your file structure if appropriate [Done!]
-    2. Implement props [Done!]
-    3. Pass data from a parent component to a child component [Done!]
-    4. Pass a callback function from a parent component to a child component and invoke it on an event in the child component [Done!]
+    1. Use react-router-dom's Routes, Route and NavLink &/or Link components to give it at least 3 routes (one of them can be "/")
+    2. Use react-router-dom's useNavigate hook to one of your components and implement a 'Back' button
+    3. Add nested routes
 
-#### Extend your music app to include useEffect
-
-1. Requirements are:
-
-    1. Fetch some data from an API of your choice - (lyrics.ovh or Bandsintown are two options with no required authentication or key but feel free to use any!) [cannot find api]
-    2. Set an interval for something to happen (it doesn't have to involve an API call - how about a background colour that changes every 30 seconds?) and make sure to clear it in a timely manner![Done!]
+### Adding Testing

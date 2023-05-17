@@ -14,7 +14,6 @@ export default function ShowSongs() {
     e.preventDefault();
     setshow(!showing)
     if (showing){
-      //div.classList.toggle("visible");
       const songs = ReactDOM.createRoot(document.getElementById('songlist'));
       document.getElementById('btn').style.display = "none";
       songs.render(<SongList/>);
