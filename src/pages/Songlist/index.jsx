@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React from 'react';
+import { useNavigate} from 'react-router-dom';
 import {ShowSongs} from '../components';
 
 const Songlist = () => {
@@ -7,7 +7,7 @@ const Songlist = () => {
     return (
         <>
             <ShowSongs />
-            <button onClick={() => navigate("/About")}>Back</button>
+            <button onClick={() => navigate("/Albums")}>Back</button>
         </>
     )
 }

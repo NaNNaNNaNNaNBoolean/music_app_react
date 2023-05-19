@@ -1,0 +1,10 @@
+#Albumlist{
+    padding: 20px;
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    align-items: center;
+    justify-content: center;
+}
+#albumInfo{
+    margin: 20px;
+}

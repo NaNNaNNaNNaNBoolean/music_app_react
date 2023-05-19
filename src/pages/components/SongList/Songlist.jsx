@@ -1,41 +1,46 @@
-import React from 'react';
+//////////////////////////////////////////////////////
+// import  Witl from './images/whereisthelove.jpg'
+// import  Igf from './images/igottafeeling.jpg'
+// import  Pi from './images/pumpit.jpg'
+// import  Mmh from './images/meetmehalfway.jpg'
+// import  Lgis from './images/letsgetitstarted.jpg'
+// import  Bbp from './images/boomboompow.jpg'
+//import Albums from '../DataSet/index'
+/////////////////////////////////////////////////////
 //import ReactDOM from 'react-dom/client'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './songlist.css'
 import {Liked} from '../'
-//////////////////////////////////////////////////////
-import  Witl from './images/whereisthelove.jpg'
-import  Igf from './images/igottafeeling.jpg'
-import  Pi from './images/pumpit.jpg'
-import  Mmh from './images/meetmehalfway.jpg'
-import  Lgis from './images/letsgetitstarted.jpg'
-import  Bbp from './images/boomboompow.jpg'
-/////////////////////////////////////////////////////
+
 
 export default function SongList() {
-  const songs = [
-    { id: 1, img: Witl,name:"Where is the love?", relDate:2003, album: "Elephunk"},
-    {id: 2, img: Igf,  name:"I gotta feeling", relDate:2009, album: "The E.N.D", liked: false },
-    {id: 3,img: Pi,  name:"pump it", relDate:2005, album: "Monkey Business", liked: false },
-    {id: 4,img: Mmh,  name:"Meet me halfway", relDate:2009, album: "The E.N.D", liked: false },
-    {id: 5,img: Lgis,  name:"let's get it started", relDate:2004, album: "", liked: false },
-    {id: 6,img: Bbp,  name:"Boon boom pow", relDate:2009, album: "The E.N.D", liked: false },
-  ];
- 
-  const songlist = songs.map(song =>
-    <div id="list" key={song.id}>
-      <img id ="cover" src ={song.img}></img>
-      <div id ="songinfo">
-        <dt>Song: {song.name}</dt> 
-          <dd > Release date:{song.relDate} Album:{song.album}</dd>
+  const { id } = useParams()
+  const [song, setSong] = useState([]);
+
+  useEffect(() => {
+    fetchSonglist()
+  }, [])
+
+  const fetchSonglist = async () => {
+    const response = await fetch(`https://myapi4testingma.onrender.com/albums/${id}`)
+    const songData = await response.json()
+    setSong(songData.songs)
+  }
+ //console.log(song)
+  const songlist = song.map(s => (
+    <div id="list" key={s.id}>
+      <div id ="songname">
+        <dt>Song: {s.song}</dt> 
       </div>
       <Liked />
-    </div>
-  );
+    </div> 
+  ));
 
   return (
     <div id= 'song-container'>
       <h2>Songs</h2>
-      <dl>{songlist}</dl>
+    <dl>{songlist}</dl>
     </div>
    
   );
